@@ -33,13 +33,13 @@ class Wheels:
     def forward(self):
         self.__lwheel.set_duty(1200)
         self.__rwheel.set_duty(1800)
-        print("go fucking straight")
+        
         
     
     def stopping(self):
         self.__rwheel.set_duty(1500)
         self.__lwheel.set_duty(1500)
-        print("stop fucking moving")
+        
         
     
     def turnright(self):
@@ -48,7 +48,7 @@ class Wheels:
         sleep(3.147)
         self.__rwheel.stop()
         self.__lwheel.stop()
-        print("Stop fucking turning")
+        
 
 
 
