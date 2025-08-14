@@ -39,6 +39,7 @@ class Wheels:
     def stopping(self):
         self.__rwheel.set_duty(1500)
         self.__lwheel.set_duty(1500)
+        print("Stopped")
         
         
     
