@@ -18,17 +18,18 @@ class Ultrasonic_Movement():
             pass
     
     def identifyslow(self):
-        if self.__range_front.distance_mm <= 200:
-            return "slow"
+        if self.__range_front.distance_mm <= 200 and self.__range_side.distance_mm <= 200:
+            return True
         else:
-            pass
+            print("gay")
 
 wheels = Wheels(16, 20)
 distance = Ultrasonic_Movement([0, 0, 0, 0], [0, 0, 1, 0])
 
 
 while True:
-    wheels.stopping()
-    print(distance.distance())
-    sleep(0.5)
-    print(distance.identifyslow())
+    wheels.forward()
+    distance.distance()
+    if distance.identifyslow():
+        wheels.turnright()
+        break
