@@ -20,11 +20,11 @@ sleep(5)
 
 wheels.stopping()
 print("Stopping movement")
-sleep(10)
+sleep(5)
 
 wheels.turnright()
 print("Turning right")
-
+sleep(1)
 
 wheels.stopping()
 print("Unit Test Complete")

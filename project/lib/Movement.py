@@ -31,21 +31,27 @@ class Wheels:
             dead_zone_us = self.__dead_zone)
 
     def forward(self):
-        self.__lwheel.set_duty(1200)
-        self.__rwheel.set_duty(1800)
-        
-        
+        self.__lwheel.set_duty(1300)
+        self.__rwheel.set_duty(1700)
+        print("Moving")
     
     def stopping(self):
         self.__rwheel.set_duty(1500)
         self.__lwheel.set_duty(1500)
         print("Stopped")
         
-        
+    def turnleft(self):
+        self.__lwheel.set_duty(1390)
+        self.__rwheel.set_duty(1390)
+        print("Turning left")
+        sleep(3.147)
+        self.__rwheel.stop()
+        self.__lwheel.stop()
     
     def turnright(self):
         self.__lwheel.set_duty(1600)
         self.__rwheel.set_duty(1600)
+        print("Turning right")
         sleep(3.147)
         self.__rwheel.stop()
         self.__lwheel.stop()
