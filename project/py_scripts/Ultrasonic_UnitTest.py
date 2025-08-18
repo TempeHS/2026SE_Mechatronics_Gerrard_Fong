@@ -10,10 +10,8 @@ while True:
     print(distance.distance())
     if distance.idturnright():
         print("Turning right")
-        break
     elif distance.idturnleft():
         print("Turning Left")
-        break
     elif distance.idmove():
         print("Moving forward")
     elif distance.idstop():

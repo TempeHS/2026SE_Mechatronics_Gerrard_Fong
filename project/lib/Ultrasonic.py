@@ -12,25 +12,25 @@ class Ultrasonic():
         return self.__range_front.distance_mm, self.__range_side.distance_mm
 
     def idmove(self):
-        if self.__range_front.distance_mm >= 300 and self.__range_side.distance_mm >= 40:
+        if self.__range_front.distance_mm >= 300:
             return True
         else:
             pass
     
     def idstop(self):
-        if self.__range_front.distance_mm < 90 and self.__range_side.distance_mm < 20:
+        if self.__range_front.distance_mm <= 50 and self.__range_side.distance_mm < 10:
             return True
         else:
             pass
 
     def idturnright(self):
-        if self.__range_front.distance_mm < 100 and self.__range_side.distance_mm > 20:
+        if self.__range_front.distance_mm < 70 and self.__range_side.distance_mm > 30:
             return True
         else: 
             pass
     
     def idturnleft(self):
-        if self.__range_front.distance_mm < 100 and self.__range_side.distance_mm < 20:
+        if self.__range_front.distance_mm < 60 and self.__range_side.distance_mm < 15:
             return True
         else: 
             pass

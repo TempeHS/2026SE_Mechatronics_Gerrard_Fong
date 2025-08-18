@@ -41,10 +41,10 @@ class Wheels:
         print("Stopped")
         
     def turnleft(self):
-        self.__lwheel.set_duty(1390)
-        self.__rwheel.set_duty(1390)
+        self.__lwheel.set_duty(1350)
+        self.__rwheel.set_duty(1350)
         print("Turning left")
-        sleep(3.147)
+        sleep(1.7)
         self.__rwheel.stop()
         self.__lwheel.stop()
     
@@ -57,5 +57,8 @@ class Wheels:
         self.__lwheel.stop()
         
 
+wheels = Wheels(16,20)
+
+wheels.turnleft()
 
 

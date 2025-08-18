@@ -24,7 +24,10 @@ sleep(5)
 
 wheels.turnright()
 print("Turning right")
-sleep(1)
+wheels.stopping()
+
+print("Turning left")
+wheels.turnleft()
 
 wheels.stopping()
 print("Unit Test Complete")
