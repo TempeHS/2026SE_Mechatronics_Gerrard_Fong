@@ -18,7 +18,7 @@ class Ultrasonic():
             pass
     
     def idstop(self):
-        if self.__range_front.distance_mm <= 50 and self.__range_side.distance_mm < 10:
+        if self.__range_front.distance_mm <= 50 and self.__range_side.distance_mm < 20:
             return True
         else:
             pass

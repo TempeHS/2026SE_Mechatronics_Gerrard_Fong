@@ -15,6 +15,7 @@ class MovementSubsystem:
                 self.__wheels.stopping()
                 self.__wheels.turnright()
                 sleep(1)
+                self.__wheels.turnleft()
 
 move = MovementSubsystem([0, 0, 0, 0], [0, 0, 1, 0], 16, 20)
 
