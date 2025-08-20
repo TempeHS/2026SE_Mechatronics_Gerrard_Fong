@@ -10,14 +10,26 @@ class MovementSubsystem:
         self.__dist = Ultrasonic(range_front, range_side)
 
     def forward(self):
+        if self.__dist.idmove():
+            self.__wheels.forward()
+            return "1"
+    
+    def rightturn(self):
+        if self.__dist.idturnright():
+            self.__wheels.turnright()
+            return "2"
+    
+    def leftturn(self):
 
-            if self.__dist.idstop():
-                while True:
-                    print(self.__dist.distance())
-                    self.__wheels.forward()
-                    if self.__dist.idturnright():
-                        self.__wheels.turnright()
-                        continue
+    #move forward
+    #if id forward true
+        #forward
+
+    #if id forward not true
+        #
+    
+    
+
 
 move = MovementSubsystem([0, 0, 0, 0], [0, 0, 1, 0], 16, 20)
 
