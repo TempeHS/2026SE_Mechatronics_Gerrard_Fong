@@ -24,16 +24,16 @@ class MovementSubsystem:
         pass
 
 
-
 class RGBSubsystem:
     def __init__(self):
-        
         self.__sensor = RGBSensor()
+        self.__screen = LCDScreen()
     
-    def idgreen(self):
-        self.__sensor.colourgreen()
-    
-    
+    def showgreen(self):
+        if self.__sensor.colourgreen():
+            self.__screen.displaying()
+        else:
+            pass
 
 
 move = MovementSubsystem([0, 0, 0, 0], [0, 0, 1, 0], 16, 20)

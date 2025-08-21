@@ -16,5 +16,5 @@ class RGBSensor:
         if 80 < hue and hue < 95:
             print("Green")
         else: 
-            print("Yo no green")
+            pass
 

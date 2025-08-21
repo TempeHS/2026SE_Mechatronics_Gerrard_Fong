@@ -12,8 +12,3 @@ class LCDScreen():
         self.__display.text("Colour: ", 0, 20, 1)
         self.__display.text(thing, 0, 40, 1)
         self.__display.show()
-
-cal = LCDScreen()
-
-cal.displaying()
-
