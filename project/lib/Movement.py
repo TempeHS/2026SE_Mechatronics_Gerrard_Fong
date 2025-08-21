@@ -10,7 +10,6 @@ class Wheels:
         self.__dead_zone = 1500
         self.__min_speed = 500
         self.__max_speed = 2300
-        self.__current_speed = 0
 
         self.__rwheel_pwm = PWM(Pin(rwheel_pin))
         self.__lwheel_pwm = PWM(Pin(lwheel_pin))

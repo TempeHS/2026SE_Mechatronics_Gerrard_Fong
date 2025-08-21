@@ -19,17 +19,18 @@ class MovementSubsystem:
             self.__wheels.forward()
             return "Moving_Forward"
         #Identifies if its safe to move forward, moves robot and returns state
+        #Might delete return state and implement in drivers for code running purposes
     
     def turningright(self):
         if self.__dist.idturnright():
             self.__wheels.turnright()
-            return "Turning_Right"
+            return "continue"
         #Ids parameters, Moves robot, returns right turn state
         
-    def leftturn(self):
+    def turningleft(self):
         if self.__dist.idturnleft():
             self.__wheels.turnleft()
-            return "Turning_Left"
+            return "continue"
         #Same as right turn function, just left turn instead
 
     def stopping(self):
@@ -43,13 +44,13 @@ class RGBSubsystem:
     def __init__(self):
         self.__sensor = RGBSensor()
         self.__screen = LCDScreen()
-        self.__wheels = Wheels(16, 20)
+        self.__wheelies = Wheels(16, 20)
         #Assocation 
-        #Might be confusing that wheels variable is the same name as movement but idc
+        
     
     def showgreen(self):
         if self.__sensor.colourgreen():
-            self.__wheels.stopping()
+            self.__wheelies.stopping()
             self.__screen.displaying()
             sleep(2)
             #Sleep is used so the robot stops moving
