@@ -24,13 +24,11 @@ class MovementSubsystem:
     def turningright(self):
         if self.__dist.idturnright():
             self.__wheels.turnright()
-            return "continue"
         #Ids parameters, Moves robot, returns right turn state
         
     def turningleft(self):
         if self.__dist.idturnleft():
             self.__wheels.turnleft()
-            return "continue"
         #Same as right turn function, just left turn instead
 
     def stopping(self):
@@ -55,7 +53,7 @@ class RGBSubsystem:
             sleep(2)
             #Sleep is used so the robot stops moving
         else:
-            pass
+            print("No Green")
             #Since this will be in a while true loop don't want it flooding terminal or anything
             #Another reason why pass is also in the RGBSensor function  
 

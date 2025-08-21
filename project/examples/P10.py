@@ -33,5 +33,3 @@ while True:
 
     label = colourSensor.classifyHue() # Read the sensor again, this time classify the colour
     print(str(label) + " Hue: " + str(hue)) # Show the label and the corresponding hue
-
-    sleep_ms(1000)

@@ -25,7 +25,15 @@ class SafetyRobot():
                 continue
             #If the robot can't turn keep looking for green and if not found keeping moving forward
 
+    def testing(self):
+        while True:
+            self.__wheels.movingforward()
+            self.__wheels.stopping()
+            self.__wheels.turningleft()
+            self.__wheels.turningright()
+            self.__RGBSensor.showgreen()
+
 FinalAct = SafetyRobot()
 
-FinalAct.activate()
+FinalAct.testing()
 #Is this a tuff final name for the function
