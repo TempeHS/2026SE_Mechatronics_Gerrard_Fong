@@ -36,8 +36,3 @@ class RGBSubsystem:
             pass
 
 
-move = MovementSubsystem([0, 0, 0, 0], [0, 0, 1, 0], 16, 20)
-
-print("Starting")
-    
-sleep(1)
