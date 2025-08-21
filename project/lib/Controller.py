@@ -1,7 +1,8 @@
 from time import sleep
 from Movement import Wheels
 from Ultrasonic import Ultrasonic
-
+from LCDScreen import LCDScreen
+from RGBSensor import RGBSensor
 
 class MovementSubsystem:
     def __init__(self, range_front: list[int], range_side: list[int], rwheel_pin: int, lwheel_pin: int):
@@ -20,13 +21,17 @@ class MovementSubsystem:
             return "2"
     
     def leftturn(self):
+        pass
 
-    #move forward
-    #if id forward true
-        #forward
 
-    #if id forward not true
-        #
+
+class RGBSubsystem:
+    def __init__(self):
+        
+        self.__sensor = RGBSensor()
+    
+    def idgreen(self):
+        self.__sensor.colourgreen()
     
     
 
@@ -34,5 +39,5 @@ class MovementSubsystem:
 move = MovementSubsystem([0, 0, 0, 0], [0, 0, 1, 0], 16, 20)
 
 print("Starting")
+    
 sleep(1)
-move.forward()
