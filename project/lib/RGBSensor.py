@@ -13,13 +13,21 @@ class RGBSensor:
         RGBSensor = self.__sensor.readHSV()
         hue = RGBSensor["hue"]
         #Used example code as a foundation
-        if 85 < hue and hue < 90:
+        if 80 < hue and hue < 90:
             print("Green")
         #Identify if colour sensor detects green and prints Green,
         #Might change later when integrating into subsystem
         else: 
-            print("No Green")
-            print(hue)
+            pass
         #Finishing function to prevent any errors in case if function is invalid during testing
         #Used to have another print function when unit testing
 
+    def colourgreentest(self):
+        #Test function for Unit Test
+        RGBSensor = self.__sensor.readHSV()
+        hue = RGBSensor["hue"]
+        if 80 < hue and hue < 90:
+            print("Green")
+        else: 
+            print("No Green")
+            print(hue)

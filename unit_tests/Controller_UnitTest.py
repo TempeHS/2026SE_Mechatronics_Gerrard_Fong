@@ -13,6 +13,7 @@ while True:
     wheels.turningright()
     wheels.turningleft()
     if RGBSensor.showgreen():
+        print("Green Found")
         wheels.stopping()
         #Realised this function may completely ruin functionality, so will only use for emergency situations in case of sensors breaking
         #Will also completely stop robot, unless I link it to left turn >: )

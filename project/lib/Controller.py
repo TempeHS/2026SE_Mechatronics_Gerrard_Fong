@@ -49,11 +49,11 @@ class RGBSubsystem:
     def showgreen(self):
         if self.__sensor.colourgreen():
             self.__wheelies.stopping()
-            self.__screen.displaying()
+            self.__screen.displaygreen()
             sleep(2)
             #Sleep is used so the robot stops moving
         else:
-            print("No Green")
+            self.__screen.display()
             #Since this will be in a while true loop don't want it flooding terminal or anything
             #Another reason why pass is also in the RGBSensor function  
 

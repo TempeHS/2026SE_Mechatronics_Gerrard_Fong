@@ -25,21 +25,21 @@ class Ultrasonic():
             pass
     
     def idstop(self):
-        if self.__range_front.distance_mm <= 50 and self.__range_side.distance_mm < 20 or self.__range_front.distance_mm > 500:
+        if self.__range_front.distance_mm <= 50 and self.__range_side.distance_mm < 30 or self.__range_front.distance_mm > 800:
             return True
         #Identifies stopping range
         else:
             pass
 
     def idturnright(self):
-        if self.__range_front.distance_mm < 70 and self.__range_side.distance_mm > 30:
+        if self.__range_front.distance_mm < 70 and self.__range_side.distance_mm > 60:
             return True
         #Identifies safe range for turning right
         else: 
             pass
     
     def idturnleft(self):
-        if self.__range_front.distance_mm < 60 and self.__range_side.distance_mm < 15:
+        if self.__range_front.distance_mm < 70 and self.__range_side.distance_mm < 60:
             return True
         #Identifies safe range for turning left
         else: 
