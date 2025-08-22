@@ -12,20 +12,17 @@ class SafetyRobot():
         #Instaniate the big boy classes
     
     def activate(self):
+        #Finalised code
         while True:
+            if self.__wheels.stopping():
+                break
             self.__wheels.movingforward()
-            #Starts robot movement
-            if self.__wheels.movingforward() == "Moving_Forward":
-            #Continue robots movement since it's obviously moving forward                   
-            #Implemented for the sake of state machine implementation
-                self.__wheels.turningright()
-                self.__wheels.turningleft()
-            else:
-                self.__RGBSensor.showgreen()
-                continue
-            #If the robot can't turn keep looking for green and if not found keeping moving forward
+            self.__wheels.turningright()
+            self.__wheels.turningleft()
+            self.__RGBSensor.showgreen()
 
     def testing(self):
+        #Testing values
         while True:
             self.__wheels.movingforward()
             self.__wheels.stopping()
@@ -35,5 +32,5 @@ class SafetyRobot():
 
 FinalAct = SafetyRobot()
 
-FinalAct.testing()
+FinalAct.activate()
 #Is this a tuff final name for the function

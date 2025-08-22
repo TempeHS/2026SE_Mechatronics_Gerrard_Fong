@@ -53,6 +53,8 @@ class RGBSubsystem:
             self.__screen.displaygreen()
             self.__wheelies.stopping()
             sleep(4)
+            self.__wheelies.forward()
+            sleep(0.5)
             #Sleep is used so the robot stops moving
         else:
             self.__screen.display()
