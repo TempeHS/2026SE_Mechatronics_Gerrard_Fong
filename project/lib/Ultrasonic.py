@@ -16,7 +16,7 @@ class Ultrasonic():
 
     def idmove(self):
         #Technically a state machine method of identifying distances, may over complicate controller but oh well :|
-        if self.__range_front.distance_mm >= 300:
+        if self.__range_front.distance_mm >= 120:
             return True
             #The functions pure purpose is to only identify the robots options, thus the name of the function
             #I did this since I had no clue what else to do, might accidentally have a bunch of if chains when creating my driver
@@ -25,21 +25,21 @@ class Ultrasonic():
             pass
     
     def idstop(self):
-        if self.__range_front.distance_mm <= 50 and self.__range_side.distance_mm < 30 or self.__range_front.distance_mm > 800:
+        if self.__range_front.distance_mm <= 30 and self.__range_side.distance_mm < 30:
             return True
         #Identifies stopping range
         else:
             pass
 
     def idturnright(self):
-        if self.__range_front.distance_mm < 70 and self.__range_side.distance_mm > 60:
+        if self.__range_front.distance_mm < 40 and self.__range_side.distance_mm > 120:
             return True
         #Identifies safe range for turning right
         else: 
             pass
     
     def idturnleft(self):
-        if self.__range_front.distance_mm < 70 and self.__range_side.distance_mm < 60:
+        if self.__range_front.distance_mm <= 40 and self.__range_side.distance_mm < 120:
             return True
         #Identifies safe range for turning left
         else: 

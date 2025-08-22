@@ -13,19 +13,16 @@ class SafetyRobot():
     
     def activate(self):
         while True:
-            try:
-                self.__wheels.movingforward()
-                #Starts robot movement
-                if self.__wheels.movingforward() == "Moving_Forward":
-                    #Continue robots movement since it's obviously moving forward
-                    #Implemented for the sake of state machine implementation
-                    self.__wheels.turningright()
-                    self.__wheels.turningleft()
-                else:
-                    self.__RGBSensor.showgreen()
-                    continue
-            except TypeError:
-                self.__wheels.stopping()
+            self.__wheels.movingforward()
+            #Starts robot movement
+            if self.__wheels.movingforward() == "Moving_Forward":
+            #Continue robots movement since it's obviously moving forward                   
+            #Implemented for the sake of state machine implementation
+                self.__wheels.turningright()
+                self.__wheels.turningleft()
+            else:
+                self.__RGBSensor.showgreen()
+                continue
             #If the robot can't turn keep looking for green and if not found keeping moving forward
 
     def testing(self):

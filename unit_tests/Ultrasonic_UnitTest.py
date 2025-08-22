@@ -1,5 +1,5 @@
 from Ultrasonic import Ultrasonic
-from time import sleep
+from time import sleep_ms
 
 distance = Ultrasonic([0, 0, 0, 0], [0, 0, 1, 0])
 #Connect class to a variable
@@ -14,10 +14,13 @@ while True:
     print(distance.distance())
     if distance.idturnright():
         print("Turning right")
+        sleep_ms(10)
     elif distance.idturnleft():
         print("Turning Left")
+        sleep_ms(10)
     elif distance.idmove():
         print("Moving forward")
+        sleep_ms(10)
     elif distance.idstop():
         print("Stopping")
         break

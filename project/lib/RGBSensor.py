@@ -14,7 +14,7 @@ class RGBSensor:
         hue = RGBSensor["hue"]
         #Used example code as a foundation
         if 80 < hue and hue < 90:
-            print("Green")
+            return True
         #Identify if colour sensor detects green and prints Green,
         #Might change later when integrating into subsystem
         else: 

@@ -17,7 +17,6 @@ class MovementSubsystem:
         #State Machine :P
         if self.__dist.idmove():
             self.__wheels.forward()
-            return "Moving_Forward"
         #Identifies if its safe to move forward, moves robot and returns state
         #Might delete return state and implement in drivers for code running purposes
     
@@ -44,17 +43,14 @@ class RGBSubsystem:
         self.__screen = LCDScreen()
         self.__wheelies = Wheels(16, 20)
         #Assocation 
-        
     
     def showgreen(self):
         if self.__sensor.colourgreen():
-            self.__wheelies.stopping()
             self.__screen.displaygreen()
-            sleep(2)
+            self.__wheelies.stopping()
+            sleep(4)
             #Sleep is used so the robot stops moving
         else:
             self.__screen.display()
             #Since this will be in a while true loop don't want it flooding terminal or anything
             #Another reason why pass is also in the RGBSensor function  
-
-

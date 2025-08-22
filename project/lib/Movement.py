@@ -36,22 +36,19 @@ class Wheels:
         self.__lwheel.set_duty(1300)
         self.__rwheel.set_duty(1700)
         #Duty set low to create steady speed
-        print("Moving")
         #For debugging purposes, "Whitebox testing"
     
     def stopping(self):
         #Stops robot
         self.__rwheel.set_duty(1500)
         self.__lwheel.set_duty(1500)
-        print("Stopped")
         #Simple Debug
         
     def turnleft(self):
         #Turns robot left
         self.__lwheel.set_duty(1350)
         self.__rwheel.set_duty(1350)
-        print("Turning left")
-        sleep(2.28)
+        sleep(2.2)
         #Timer is used to turn robot at a 90 degree angle, Guess and check
         self.__rwheel.stop()
         self.__lwheel.stop()
@@ -62,13 +59,16 @@ class Wheels:
         #Turns robot right
         self.__lwheel.set_duty(1650)
         self.__rwheel.set_duty(1650)
-        print("Turning right")
-        sleep(1.8)
+        sleep(1.84)
         #Guess and check value, something with the duty values made it so 1400 
         #would also stop robot thus the change in time and duty values
         self.__rwheel.stop()
         self.__lwheel.stop()
         
 
+wheels = Wheels(16,20)
 
+wheels.turnright()
+sleep(1)
+wheels.turnleft()
 
