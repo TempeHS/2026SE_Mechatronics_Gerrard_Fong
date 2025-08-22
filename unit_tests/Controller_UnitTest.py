@@ -7,17 +7,14 @@ RGBSensor = RGBSubsystem()
 print("Starting Unit Test")
 sleep(2)
 
-
 while True:
     #This might just be the final code since the robot will run indefinitely
+    if wheels.stopping():
+        break
     wheels.movingforward()
     wheels.turningright()
     wheels.turningleft()
-    if wheels.stopping():
-        break
-    
-        #Realised this function may completely ruin functionality, so will only use for emergency situations in case of sensors breaking
-        #Will also completely stop robot, unless I link it to left turn >: )
+    RGBSensor.showgreen()
         #End loop and unit test
 
 

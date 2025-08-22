@@ -33,6 +33,10 @@ class MovementSubsystem:
     def stopping(self):
         if self.__dist.idstop():
             self.__wheels.stopping()
+            print("Stopping Robot")
+            sleep(1)
+            return True
+        return False
         #Might not have to use this, or might have to improve it's functionality
         #In case robot tries diving head first into a wall and breaks ultrasonic sensors
 

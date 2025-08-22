@@ -10,10 +10,10 @@ class LCDScreen():
         #Set value for display screen
     def displaygreen(self):
         #A simple function that will display green on LCD screen will be integrated later for practical functionality
-        thing = "Green"
+        
         self.__display.fill(0)
         self.__display.text("Colour: ", 0, 20, 1)
-        self.__display.text(thing, 0, 40, 1)
+        self.__display.text("Green", 0, 40, 1)
         self.__display.show()
         #Used code from example
 

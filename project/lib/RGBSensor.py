@@ -15,10 +15,10 @@ class RGBSensor:
         #Used example code as a foundation
         if 80 < hue and hue < 90:
             return True
-        #Identify if colour sensor detects green and prints Green,
+        #Identify if colour sensor detects green and returns True
         #Might change later when integrating into subsystem
         else: 
-            pass
+            return False
         #Finishing function to prevent any errors in case if function is invalid during testing
         #Used to have another print function when unit testing
 
